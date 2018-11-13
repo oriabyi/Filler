@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 14:18:27 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/08/29 18:53:53 by ariabyi          ###   ########.fr       */
@@ -19,21 +19,16 @@
 # include <zconf.h>
 # include <stdarg.h>
 # include <fcntl.h>
-
-# define MAX_FD 10
-//# define BUFF_SIZE 32
-
-//# include "libft/includes/libft.h"
 # include <sys/types.h>
-
 # include <sys/uio.h>
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
-# define BUFF_SIZE 32
+
+# define MAX_FD 10
+# define BUFF_SIZE 10
 # define ENDL '\n'
 # define END '\0'
-# define MALLCHECK(x) if (!x) return (-1);
 
 typedef	struct		s_list
 {
@@ -111,7 +106,7 @@ void				ft_printbits(unsigned long long num);
 int					ft_numodgt(long long n);
 int					ft_numows(char const *s, char c);
 int					ft_printhex(size_t num, int base, int counter, char x);
-int				ft_strpos(const char *s, int c);
+int					ft_strpos(const char *s, int c);
 int					ft_sqrt(unsigned int num);
 char				*ft_margin(char *pen, char *apple);
 short int			ft_pwrbase(ssize_t num, int base);
@@ -126,5 +121,8 @@ int					ft_iswsps(const char *str);
 void				ft_setnum(void **arr, int len, int num);
 int					ft_pmult_fd(int fd, int count, ...);
 int					ft_check_iarr(int **arr, int x, int y, int num);
+char				*ft_multjoinfr(int field, ...);
+int					free_str_return_int(char **str, int ret);
+int					are_nums(char *s);
 
 #endif
