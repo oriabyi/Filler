@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auxiliary.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 17:41:11 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/11/14 17:41:12 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/11/14 17:41:11 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/11/14 17:41:12 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,6 @@ int					raising_to_the_power(int num, int power)
 		num *= temp_num;
 	}
 	return (num);
-}
-
-short int			ft_pwrbase(ssize_t num, int base)
-{
-	short int		counter;
-
-	base = (!base) ? 10 : base;
-	counter = 1;
-	if (num < 0 || base < 0)
-		counter++;
-	if (num == base && base < 10)
-		return (counter);
-	while ((num /= base))
-		counter++;
-	return (counter);
 }
 
 int					*split_num(int num)

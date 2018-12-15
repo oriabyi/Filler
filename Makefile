@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: oriabyi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/11/26 13:54:03 by ariabyi           #+#    #+#              #
-#    Updated: 2018/11/26 14:14:09 by ariabyi          ###   ########.fr        #
+#    Created: 2018/11/26 13:54:03 by oriabyi           #+#    #+#              #
+#    Updated: 2018/11/26 14:14:09 by oriabyi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all clean fclean re mre
 
-FILLER_BOT := ariabyi.filler
+FILLER_BOT := oriabyi.filler
 VM := vm.filler
 
 FILLER_PATH := filler/

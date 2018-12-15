@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   beta_fill_map.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 15:09:06 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/11/13 15:09:07 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/11/13 15:09:06 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/11/13 15:09:07 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

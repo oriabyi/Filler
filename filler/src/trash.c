@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auxiliary.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 16:09:02 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/11/13 16:09:03 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/11/13 16:09:02 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/11/13 16:09:03 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

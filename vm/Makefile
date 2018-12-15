@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: oriabyi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/05/11 15:21:59 by ariabyi           #+#    #+#              #
-#    Updated: 2018/11/26 15:23:49 by ariabyi          ###   ########.fr        #
+#    Created: 2018/05/11 15:21:59 by oriabyi           #+#    #+#              #
+#    Updated: 2018/11/26 15:23:49 by oriabyi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,9 @@ SRC =	$(SRCDIR)main.c \
 
 
 CFLAGS = -Wall -Wextra -Werror
-HEADER = -I ./includes -I ./libft/libft.h
-LIBINCL = -L. libft/libft.a
-LIBDIR = ./libft
+LIBDIR = ../libft
+HEADER = -I ./includes -I $(LIBDIR)libft.h
+LIBINCL = -L. $(LIBDIR)/libft.a
 OBJFOLD = ./.obj/
 OBJ = $(addprefix $(OBJFOLD), $(SRC:.c=.o))
 

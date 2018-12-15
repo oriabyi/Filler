@@ -6,7 +6,7 @@
 #    By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/11 15:21:59 by oriabyi           #+#    #+#              #
-#    Updated: 2018/12/15 13:09:26 by ariabyi          ###   ########.fr        #
+#    Updated: 2018/12/15 13:29:07 by ariabyi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,16 +18,15 @@ SRCDIR = src/
 SRC =	$(SRCDIR)main.c				\
 		$(SRCDIR)parsing.c			\
 		$(SRCDIR)get_answer.c		\
-		$(SRCDIR)auxiliary.c		\
 		$(SRCDIR)clean.c			\
 		$(SRCDIR)template_num_map.c	\
 		$(SRCDIR)init_num_map.c		\
 		$(SRCDIR)give_answer.c
 
 CFLAGS = -Wall -Wextra -Werror
-HEADER = -I ./includes -I ./libft/libft.h
-LIBINCL = -L. libft/libft.a
-LIBDIR = ./libft
+LIBDIR = ../libft
+HEADER = -I ./includes -I $(LIBDIR)/libft.h
+LIBINCL = -L. $(LIBDIR)/libft.a
 OBJFOLD = ./.obj/
 OBJ = $(addprefix $(OBJFOLD), $(SRC:.c=.o))
 

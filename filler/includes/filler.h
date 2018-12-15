@@ -13,18 +13,18 @@
 #ifndef FILLER_H
 # define FILLER_H
 
-# include "../libft/libft.h"
+# include "../../libft/libft.h"
 
 # define ENEMY	-1
 # define ME		-2
 # define POINT	-3
 
-# define MYSIGN			(filler->my)
-# define MYSIGNSMALL	(filler->my + 32)
-# define FOESSIGN		(filler->enemy)
-# define FOESSIGNSMALL	(filler->enemy + 32)
+# define MYSIGN				(filler->my)
+# define MYSIGNSMALL		(filler->my + 32)
+# define FOESSIGN			(filler->enemy)
+# define FOESSIGNSMALL		(filler->enemy + 32)
 
-# define IS_MY_SIGN(x)	((x) == MYSIGN || (x) == MYSIGNSMALL)
+# define IS_MY_SIGN(x)		((x) == MYSIGN || (x) == MYSIGNSMALL)
 # define IS_FOES_SIGN(x)	((x) == FOESSIGN || (x) == FOESSIGNSMALL)
 
 typedef struct			s_map
@@ -80,7 +80,6 @@ void					get_real_piece(t_filler *filler);
 ** get line
 */
 char					*append_char(char **s, char c);
-int						lgnl(int fd, char **line);
 
 /*
 ** get/give answer
