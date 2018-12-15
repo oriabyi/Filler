@@ -3,53 +3,42 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+         #
+#    By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/05/11 15:21:59 by ariabyi           #+#    #+#              #
-#    Updated: 2018/11/13 16:51:05 by ariabyi          ###   ########.fr        #
+#    Created: 2018/11/26 13:54:03 by ariabyi           #+#    #+#              #
+#    Updated: 2018/11/26 14:14:09 by ariabyi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY:         all clean fclean re $(NAME)
+.PHONY: all clean fclean re mre
 
-CC = gcc
-NAME = ariabyi.filler
-SRCDIR = src/
-SRC =	$(SRCDIR)main.c \
-		$(SRCDIR)parsing.c \
-		$(SRCDIR)get_answer.c \
-		$(SRCDIR)auxiliary.c \
-		$(SRCDIR)clean.c \
-		$(SRCDIR)alpha_fill_map.c \
-		$(SRCDIR)beta_fill_map.c \
-		$(SRCDIR)give_answer.c \
+FILLER_BOT := ariabyi.filler
+VM := vm.filler
 
-CFLAGS = -Wall -Wextra -Werror
-HEADER = -I ./includes -I ./libft/libft.h
-LIBINCL = -L. libft/libft.a
-LIBDIR = ./libft
-OBJFOLD = ./.obj/
-OBJ = $(addprefix $(OBJFOLD), $(SRC:.c=.o))
+FILLER_PATH := filler/
+VM_PATH := vm/
 
-all:            $(NAME)
+all:
+	@ make -C $(FILLER_PATH)
+	@ make -C $(VM_PATH)
+	@ ln -fs $(FILLER_PATH)$(FILLER_BOT) $(FILLER_BOT)
+	@ ln -fs $(VM_PATH)$(VM) $(VM)
+	@ chmod 744 $(FILLER_BOT) $(VM)
 
-$(NAME): $(OBJ)
-	@make -C $(LIBDIR) -f Makefile
-	$(CC) $(CFLAGS) $(LIBINCL) $(HEADER) -o $(NAME) $(OBJ) 
-	@echo "filler: done"
-
-$(OBJFOLD)%.o: %.c
-	@mkdir -p $(OBJFOLD)$(SRCDIR)
-	$(CC) $(CFLAGS) $(HEADER) -o $@ -c $<
+mre:
+	@ make mre -C $(FILLER_PATH)
+	@ make mre -C $(VM_PATH)
+	@ ln -fs $(FILLER_PATH)$(FILLER_BOT) $(FILLER_BOT)
+	@ ln -fs $(VM_PATH)$(VM) $(VM)
+	@ chmod 744 $(FILLER_BOT) $(VM)
 
 clean:
-	@rm -rf $(OBJFOLD)
-	@make -C $(LIBDIR) -f Makefile clean
-	@echo "objects removed"
+	make clean -C $(FILLER_PATH)
+	make clean -C $(VM_PATH)
 
-fclean: clean
-	@rm -f $(NAME)
-	@make -C $(LIBDIR) -f Makefile fclean
-	@echo "binary removed"
+fclean:
+	make fclean -C $(FILLER_PATH)
+	make fclean -C $(VM_PATH)
+	rm -f $(FILLER_BOT) $(VM)
 
-re:             fclean all
+re: fclean all

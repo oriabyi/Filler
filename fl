@@ -1,0 +1,5 @@
+map=$1
+first=$2
+second=$3
+flagvs=$4
+./resources/filler_vm -f ./$map -p1 ./$first -p2 ./$second | ./vm.filler -$flagvs
