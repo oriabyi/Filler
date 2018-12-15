@@ -41,7 +41,6 @@ int						check_points(t_choices *choices,
 	return (1);
 }
 
-
 int						check_touches(t_filler *filler,
 							int ym, int xm, int touches)
 {

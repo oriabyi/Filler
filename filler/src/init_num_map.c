@@ -17,8 +17,11 @@ void				fill_cell_num_map(t_filler *filler,
 {
 	if (filler->num_map[y][(*x)] == num)
 	{
-		if ((*x) + 1 < filler->map.size_x && filler->num_map[y][(*x) + 1] == POINT)
+		if ((*x) + 1 < filler->map.size_x &&
+			filler->num_map[y][(*x) + 1] == POINT)
+		{
 			filler->num_map[y][(*x) + 1] = num + 1;
+		}
 		if ((*x) - 1 >= 0 && filler->num_map[y][(*x) - 1] == POINT)
 			filler->num_map[y][(*x) - 1] = num + 1;
 		if (y + 1 < filler->map.size_y && filler->num_map[y + 1][(*x)] == POINT)
@@ -58,7 +61,7 @@ void				fill_num_map(t_filler *filler)
 	num = -1;
 	y = 0;
 	while (y < filler->map.size_y &&
-		   num < filler->map.size_y + filler->map.size_x)
+			num < filler->map.size_y + filler->map.size_x)
 	{
 		x = 0;
 		while (x < filler->map.size_x)

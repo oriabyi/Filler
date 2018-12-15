@@ -94,7 +94,7 @@ void				get_real_piece(t_filler *filler)
 		return ;
 	while (filler->piece.piece[y] && x < len_of_y)
 	{
-		filler->piece.real_piece[x] = ft_strsub(filler->piece.piece[y], 
+		filler->piece.real_piece[x] = ft_strsub(filler->piece.piece[y],
 				(unsigned)filler->piece.start_x,
 				(size_t)filler->piece.end_x - filler->piece.start_x + 1);
 		y++;

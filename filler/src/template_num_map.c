@@ -12,7 +12,7 @@
 
 #include "../includes/filler.h"
 
-void			fill_template_num_map(t_filler *filler, int nm_y, int y_map)
+void				fill_template_num_map(t_filler *filler, int nm_y, int y_map)
 {
 	int				nm_x;
 	int				x_map;
